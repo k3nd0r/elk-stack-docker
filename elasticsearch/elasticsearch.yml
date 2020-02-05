@@ -1,6 +1,6 @@
 cluster.name: "sec-testing"
 network.host: 0.0.0.0
-cluster.initial_master_nodes: 127.0.0.1
+discovery.seed_hosts: 127.0.0.1
 
 # minimum_master_nodes need to be explicitly set when bound on a public IP
 # # set to 1 to allow single node clusters
