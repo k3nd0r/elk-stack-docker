@@ -7,7 +7,7 @@ services:
       - http.host=0.0.0.0
       - transport.host=0.0.0.0
       - xpack.security.enabled=false
-      - cluster.name=hive
+      - cluster.name=sec-testing
       - script.inline=true
       - thread_pool.index.queue_size=100000
       - thread_pool.search.queue_size=100000
