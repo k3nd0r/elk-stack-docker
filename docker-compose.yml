@@ -8,6 +8,8 @@ services:
       - transport.host=0.0.0.0
       - xpack.security.enabled=false
       - cluster.name=sec-testing
+      - discovery.seed_hosts=127.0.0.1
+
     volumes:
       - sec_esdata01:/usr/share/elasticsearch/data
       - ./elasticsearch/elasticsearch.yml:/etc/elasticsearch/elasticsearch.yml
