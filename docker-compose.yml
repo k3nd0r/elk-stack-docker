@@ -4,10 +4,9 @@ services:
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.4.0
     environment: 
-      - discovery.type=single-node
-      - xpack.security.enabled=false
       - http.host=0.0.0.0
       - transport.host=0.0.0.0
+      - xpack.security.enabled=false
       - cluster.name=hive
       - script.inline=true
       - thread_pool.index.queue_size=100000
