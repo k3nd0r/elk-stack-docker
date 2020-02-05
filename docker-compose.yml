@@ -1,4 +1,4 @@
-version: "3"
+version: "2"
 
 services: 
   elasticsearch:
@@ -36,4 +36,4 @@ networks:
     ipam:
       config:
         - subnet: 172.18.2.0/24
-        - gateway: 172.18.2.2
+          gateway: 172.18.2.2
