@@ -39,6 +39,8 @@ services:
       - logstash
     ports: 
       - 5601:5601
+    environment:
+      - elasticsearch.hosts=172.18.2.20
     networks:
       security_network:
         ipv4_address: 172.18.2.22
