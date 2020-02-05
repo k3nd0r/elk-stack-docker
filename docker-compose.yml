@@ -12,6 +12,9 @@ services:
       - thread_pool.index.queue_size=100000
       - thread_pool.search.queue_size=100000
       - thread_pool.bulk.queue_size=100000
+    volumes:
+      - sec_esdata01:/usr/share/elasticsearch/data
+      - ./elasticsearch/elasticsearch.yml:/etc/elasticsearch/elasticsearch.yml
     networks:
       security_network:
         ipv4_address: 172.18.2.20
@@ -41,6 +44,10 @@ services:
     networks:
       security_network:
         ipv4_address: 172.18.2.22
+
+volumes:
+  sec_esdata01:
+    driver: local
 
 networks:
   security_network:
