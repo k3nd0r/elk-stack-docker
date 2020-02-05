@@ -8,10 +8,6 @@ services:
       - transport.host=0.0.0.0
       - xpack.security.enabled=false
       - cluster.name=sec-testing
-      - script.inline=true
-      - thread_pool.index.queue_size=100000
-      - thread_pool.search.queue_size=100000
-      - thread_pool.bulk.queue_size=100000
     volumes:
       - sec_esdata01:/usr/share/elasticsearch/data
       - ./elasticsearch/elasticsearch.yml:/etc/elasticsearch/elasticsearch.yml
