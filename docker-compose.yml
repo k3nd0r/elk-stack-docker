@@ -3,13 +3,6 @@ version: "2"
 services: 
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.4.0
-    environment: 
-      - http.host=0.0.0.0
-      - transport.host=0.0.0.0
-      - xpack.security.enabled=false
-      - cluster.name=sec-testing
-      - discovery.seed_hosts=127.0.0.1
-
     volumes:
       - sec_esdata01:/usr/share/elasticsearch/data
       - ./elasticsearch/elasticsearch.yml:/etc/elasticsearch/elasticsearch.yml
