@@ -6,11 +6,19 @@ services:
     environment: 
       - discovery.type=single-node
       - xpack.security.enabled=false
+      - http.host=0.0.0.0
+      - transport.host=0.0.0.0
+      - cluster.name=hive
+      - script.inline=true
+      - thread_pool.index.queue_size=100000
+      - thread_pool.search.queue_size=100000
+      - thread_pool.bulk.queue_size=100000
     networks:
       security_network:
         ipv4_address: 172.18.2.20
     ports: 
       - 9200:9200
+      - 9300:9300
 
   logstash:
     image: docker.elastic.co/logstash/logstash:7.4.0
