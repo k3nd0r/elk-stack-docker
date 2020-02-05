@@ -18,7 +18,7 @@ services:
       - 5045:5045
     volumes:
       - ./logstash/config_files/:/etc/logstash/conf.d/:ro
-    command: logstash -f /etc/logstash/conf.d/*
+    command: logstash -f /etc/logstash/conf.d/
     networks:
       security_network:
         ipv4_address: 172.18.2.21
