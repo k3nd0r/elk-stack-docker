@@ -16,6 +16,8 @@ services:
       - elasticsearch
     ports:
       - 5045:5045
+    volumes:
+      - /opt/elk-stack-docker/logstash/conf.d:/etc/logstash/conf.d
     networks:
       security_network:
         ipv4_address: 172.18.2.21
